@@ -26,6 +26,10 @@ body{
   color: white;
 }
 
+/* .header_name {
+  font-family: 
+} */
+
 nav > a, nav > a:visited {
   text-decoration: none;
   color: rgb(230, 217, 230);
@@ -50,9 +54,22 @@ nav >a:hover {
   max-width: 500px;
 }
 
-.dogspotPic{
-  width: 600px;
-  height: 400px;
+.projectsContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.projectSpot {
+  border: 1px solid black;
+  width: 40em;
+  margin: 5em;
+  background-color: rgb(112, 128, 143);
+  color: white;
+}
+
+.projectPic{
+  width: 19em;
+  height: 16em;
 }
 
 @keyframes App-logo-spin {

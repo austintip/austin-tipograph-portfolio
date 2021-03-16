@@ -6,10 +6,10 @@ class Header extends Component {
     render() {
         return(
             <header className="App-header">
+                <h1 className="header_name">Austin Tipograph</h1>
                 <nav>
-                    <Link to="/">Go to the Home Page</Link>{' | '}
-                    <Link to="/about">About!</Link>{' | '}
-                    <Link to="/blog">Blog Posts!</Link>{' | '}
+                    <Link to="/">Home Page</Link>{' | '}
+                    <Link to="/about">About Me!</Link>{' | '}
                     <Link to="/projects">My Projects</Link>
                 </nav>
         </header>
