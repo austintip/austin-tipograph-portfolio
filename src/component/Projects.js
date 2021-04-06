@@ -3,6 +3,8 @@ import React from 'react'
 
 const Projects = (props) => {
     return (
+        <>
+        <h1>Here's what I've been working on!</h1>
         <div className="projectsContainer">
             <div className="projectSpot">
                 <h1>DogSpot</h1>
@@ -19,6 +21,7 @@ const Projects = (props) => {
                 <p>Pokémon Catch is a game developed using HTML JavaScript and CSS. It is built on a JavaScript Canvas and the aim of the game is to catch Pokémon without your Pokéball being stolen by the evil Team Rocket! Check it out for yourself <a href="https://austintip.github.io/Pokemon-Catch/" target="_blank">here!</a></p>
             </div>
         </div>
+        </>
     )
 }
 

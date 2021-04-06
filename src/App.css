@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-bottom: 5em;
 }
 
 html, body {
@@ -15,6 +16,7 @@ body{
   display: flex;
   flex-direction: column;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,15 +37,19 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background: linear-gradient(#728ec6, aliceblue);
+  margin-bottom: 1em;
+  font-family: Chalkduster, fantasy;
 }
 
-/* .header_name {
-  font-family: 
-} */
+nav {
+  color: black
+}
 
 nav > a, nav > a:visited {
   text-decoration: none;
-  color: rgb(230, 217, 230);
+  /* color: rgb(230, 217, 230); */
+  color: black;
 }
 
 nav >a:hover {
@@ -53,17 +59,6 @@ nav >a:hover {
   color: #61dafb;
 }
 
-.pokePosts {
-  list-style: none;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  border: 1px solid black;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 500px;
-}
 
 .projectsContainer {
   display: flex;
@@ -72,10 +67,15 @@ nav >a:hover {
 
 .projectSpot {
   border: 1px solid black;
+  border-radius: 5px;
   width: 40em;
-  margin: 5em;
+  margin-top: 2em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-bottom: 2em;
   background-color: rgb(112, 128, 143);
-  color: white;
+  color: rgb(255, 253, 253);
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 .projectPic {
@@ -83,18 +83,34 @@ nav >a:hover {
   height: 16em;
 }
 
-.austinPic {
-  width: 27em;
-  height: 20em;
+.aboutMeContainer {
+  margin-bottom: 5.5em;
 }
 
-/* .footer {
-  flex-shrink: 0;
-  text-align: center;
-  height: 40px;
-  background-color: rgb(110, 188, 213);
-  color: white;
-} */
+.aboutMeBox {
+  display: flex;
+  justify-content: center;
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-bottom: 2em;
+  /* border: 1px solid black; */
+}
+
+.aboutMe {
+  color: rgb(119, 112, 173);
+}
+
+.austinPic {
+  width: 27em;
+  height: 19em;
+}
+
+.socialsLinks {
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+  margin-left: .5em;
+}
 
 @keyframes App-logo-spin {
   from {
