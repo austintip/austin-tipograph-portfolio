@@ -1,8 +1,19 @@
 .App {
   text-align: center;
 }
+
+html, body {
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
 body{
   background-color:aliceblue;
+  display: flex;
+  flex-direction: column;
 }
 .App-logo {
   height: 40vmin;
@@ -67,10 +78,23 @@ nav >a:hover {
   color: white;
 }
 
-.projectPic{
+.projectPic {
   width: 19em;
   height: 16em;
 }
+
+.austinPic {
+  width: 27em;
+  height: 20em;
+}
+
+/* .footer {
+  flex-shrink: 0;
+  text-align: center;
+  height: 40px;
+  background-color: rgb(110, 188, 213);
+  color: white;
+} */
 
 @keyframes App-logo-spin {
   from {
