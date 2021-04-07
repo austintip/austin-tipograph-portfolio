@@ -1,8 +1,7 @@
-import React from 'react'
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Home from './component/Home'
+import Contact from './component/Contact'
 import About from './component/About'
 import Projects from './component/Projects'
 import Header from './component/partials/Header'
@@ -21,7 +20,7 @@ const App = () => {
           <About
             austinPic={austinPic}
           />} />
-        <Route path="/contact" component={Home} />
+        <Route path="/contact" component={Contact} />
         <Route path="/projects" render={() =>
           <Projects
             dogspot={dogspot}
