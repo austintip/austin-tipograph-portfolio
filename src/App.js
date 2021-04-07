@@ -17,11 +17,11 @@ const App = () => {
     <Router>
       <Header />
       <main className="App">
-        <Route exact path="/" component={Home} />
-        <Route path="/about" render={() => 
+        <Route exact path="/" render={() =>
           <About
             austinPic={austinPic}
           />} />
+        <Route path="/contact" component={Home} />
         <Route path="/projects" render={() =>
           <Projects
             dogspot={dogspot}

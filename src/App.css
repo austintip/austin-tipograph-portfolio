@@ -113,6 +113,8 @@ nav >a:hover {
 .austinPic {
   width: 27em;
   height: 19em;
+  border-radius: 15%;
+  box-shadow: black 5px 5px 5px 5px;
 }
 
 .socialsLinks {
