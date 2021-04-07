@@ -15,6 +15,8 @@ body{
   background-color:aliceblue;
   display: flex;
   flex-direction: column;
+  /* overflow-x: auto; */
+  /* white-space: nowrap; */
 }
 
 /* .App-logo {
@@ -22,16 +24,19 @@ body{
   pointer-events: none;
 } */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
+
+
 
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -115,6 +120,10 @@ nav >a:hover {
   height: 19em;
   border-radius: 15%;
   box-shadow: black 5px 5px 5px 5px;
+
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
 }
 
 .socialsLinks {
@@ -130,5 +139,30 @@ nav >a:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .projectsContainer {
+    max-width: 100%;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+  }
+  .projectSpot {
+    max-width: 100%;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+  }
+  .projectPic {
+    max-width: 100%;
+  }
+
+  .aboutMeBox {
+    display:inline;
   }
 }

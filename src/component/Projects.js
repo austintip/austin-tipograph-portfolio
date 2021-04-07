@@ -8,7 +8,7 @@ const Projects = (props) => {
                 <a href="https://dogspot.herokuapp.com/" target="_blank">
                     <img className="projectPic" src={props.dogspot} />
                 </a>
-                <p>DogSpot is an app that allows users to look up dog breeds, click on a link to lear more about the dogs, and save them to a favorite "My Dogs" list. Check it out for yourself <a href="https://dogspot.herokuapp.com/" target="_blank">here!</a></p>
+                <p>DogSpot is an app that allows users to look up dog breeds, click on a link to lear more about the dogs, and save them to a favorite "My Dogs" list. It is built using Node, Express EJS, and The Dog API. Check it out for yourself <a href="https://dogspot.herokuapp.com/" target="_blank">here!</a></p>
             </div>
             <div className="projectSpot">
                 <h1>Pokémon Catch</h1>
