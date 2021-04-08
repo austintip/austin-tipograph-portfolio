@@ -1,41 +1,120 @@
-import { useState } from 'react'
+// import { useState } from 'react';
+// import axios from 'axios'
 
-const Contact = (props) => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+// const Contact = (props) => {
+//     const [name, setName] = useState('');
+//     const [email, setEmail] = useState('');
+//     const [message, setMessage] = useState('');
 
-    const onNameChange = (e) => {
-        setName(e.target.value )
+//     const onNameChange = (e) => {
+//         setName(e.target.value)
+//     }
+
+//     const onEmailChange = (e) => {
+//         setEmail(e.target.value)
+//     }
+
+//     const onMessageChange = (e) => {
+//         setMessage(e.target.value)
+//     }
+
+//     const resetForm = () => {
+//         setName('')
+//         setEmail('')
+//         setMessage('')
+//     }
+
+//     const handleSubmit = (e) => {
+//         e.preventDefault();
+//         console.log(name, email, message);
+//         axios({
+//             method: "POST",
+//             url: "http://localhost:3002/send",
+//             data: [name, email, message]
+//         }).then((response) => {
+//             if (response.data.status === 'success') {
+//                 alert("Message Sent.");
+//                 resetForm()
+//             } else if (response.data.status === 'fail') {
+//                 alert("Message failed to send.")
+//             }
+//         })
+//     }
+
+
+//     return (
+//         <div className="App">
+//             <form id="contact-form" onSubmit={handleSubmit.bind()} method="POST">
+//                 <div className="form-group">
+//                     <label htmlFor="name">Name</label>
+//                     <input type="text" className="form-control" value={name} onChange={onNameChange.bind()} />
+//                 </div>
+//                 <div className="form-group">
+//                     <label htmlFor="exampleInputEmail1">Email address</label>
+//                     <input type="email" className="form-control" aria-describedby="emailHelp" value={email} onChange={onEmailChange.bind()} />
+//                 </div>
+//                 <div className="form-group">
+//                     <label htmlFor="message">Message</label>
+//                     <textarea className="form-control" rows="5" value={message} onChange={onMessageChange.bind()} />
+//                 </div>
+//                 <button type="submit" className="btn btn-primary">Submit</button>
+//             </form>
+//         </div>
+//     );
+// }
+
+
+// export default Contact
+
+import React from 'react';
+import axios from 'axios';
+
+class Contact extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
+        }
     }
 
-    const onEmailChange = (e) => {
-        setEmail( e.target.value )
-    }
-
-    const onMessageChange = (e) => {
-        setMessage(e.target.value)
-    }
-
-    const handleSubmit = (e) => {
+    handleSubmit(e) {
         e.preventDefault();
-        console.log(name, email, message)
+        axios({
+            method: "POST",
+            url: "http://localhost:3002/send",
+            data: this.state
+        }).then((response) => {
+            if (response.data.status === 'success') {
+                alert("Message Sent.");
+                this.resetForm()
+            } else if (response.data.status === 'fail') {
+                alert("Message failed to send.")
+            }
+        })
     }
 
+    resetForm() {
+        this.setState({ name: '', email: '', message: '', })
+    }
+
+    render() {
         return (
             <div className="App">
-                <form id="contact-form" onSubmit={handleSubmit.bind()} method="POST">
+                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" value={name} onChange={onNameChange.bind()} />
+                        <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" aria-describedby="emailHelp" value={email} onChange={onEmailChange.bind()} />
+                        <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea className="form-control" rows="5" value={message} onChange={onMessageChange.bind()} />
+                        <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
@@ -43,5 +122,17 @@ const Contact = (props) => {
         );
     }
 
+    onNameChange(event) {
+        this.setState({ name: event.target.value })
+    }
 
-export default Contact
+    onEmailChange(event) {
+        this.setState({ email: event.target.value })
+    }
+
+    onMessageChange(event) {
+        this.setState({ message: event.target.value })
+    }
+}
+
+export default Contact;
