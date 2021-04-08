@@ -103,7 +103,7 @@ class Contact extends React.Component {
     render() {
         return (
             <>
-            <h1>Say Hi!</h1>
+            <h1 className="page-header">Say Hi!</h1>
                 <div className="contactContainer">
                     <div>
                         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">

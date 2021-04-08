@@ -1,7 +1,7 @@
 const About = (props) => {
     return (
         <div className="aboutMeContainer">
-            <h1>Hi, I'm Austin!</h1>
+            <h1 className="page-header">Hi, I'm Austin!</h1>
             <div className="picLinkHolder">
                 <img className="austinPic" src={props.austinPic} alt="Image of Austin"/>
             </div>

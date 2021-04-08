@@ -15,21 +15,12 @@ body{
   background-color:aliceblue;
   display: flex;
   flex-direction: column;
-  /* overflow-x: auto; */
-  /* white-space: nowrap; */
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
+.page-header{
+  color:rgb(24, 103, 105)
+}
 
 
 .App-header {
@@ -45,10 +36,6 @@ body{
   background: linear-gradient(#728ec6, aliceblue);
   margin-bottom: 1em;
   font-family: Chalkduster, fantasy;
-}
-
-.header_name {
-  margin-bottom: 0
 }
 
 .header_email{

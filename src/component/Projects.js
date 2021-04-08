@@ -1,7 +1,7 @@
 const Projects = (props) => {
     return (
         <>
-        <h1>Here's what I've been working on!</h1>
+        <h1 className="page-header">Here's what I've been working on!</h1>
         <div className="projectsContainer">
             <div className="projectSpot">
                 <h1>DogSpot</h1>
