@@ -19,7 +19,8 @@ body{
 
 
 .page-header{
-  color:rgb(24, 103, 105)
+  color:rgb(24, 103, 105);
+  text-decoration: underline;
 }
 
 
@@ -77,6 +78,7 @@ nav >a:hover {
   margin-bottom: 2em;
   background-color: rgb(112, 128, 143);
   color: rgb(255, 253, 253);
+  box-shadow: rgba(43, 43, 43, 0.579) 5px 5px 5px 5px;
 }
 
 .projectPic {
@@ -94,7 +96,6 @@ nav >a:hover {
   margin-left: 10em;
   margin-right: 10em;
   margin-bottom: 2em;
-  /* border: 1px solid black; */
 }
 
 .aboutMe {
@@ -126,18 +127,22 @@ nav >a:hover {
   flex-direction: column;
   justify-content: center;
   margin: 2em 10em 2em 10em;
-  background-color: rgb(203, 190, 190);
+  background-color: rgb(112, 128, 143);
+  box-shadow: rgba(43, 43, 43, 0.579) 5px 5px 5px 5px;
+  color: white;
+  font-size: larger;
 }
 
 .form-control {
   margin-bottom: 1em;
   margin-left: 7em;
   padding-right: 40%;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
 }
 
-#contact-form {
+.contact-form {
   margin-left: 2em;
   text-align: left;
 }
