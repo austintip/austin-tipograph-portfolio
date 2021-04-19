@@ -20,7 +20,6 @@ body{
 
 .page-header{
   color:rgb(24, 103, 105);
-  text-decoration: underline;
 }
 
 
@@ -39,11 +38,6 @@ body{
   font-family: Chalkduster, fantasy;
 }
 
-.header_email{
-margin-top: 1em;
-color:rgb(252, 251, 251);
-text-decoration: underline;
-}
 
 nav {
   color: black
