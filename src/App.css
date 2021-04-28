@@ -15,6 +15,7 @@ body{
   background-color:aliceblue;
   display: flex;
   flex-direction: column;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 
@@ -50,7 +51,7 @@ nav > a, nav > a:visited {
 }
 
 nav >a:hover {
-  color: #61dafb;
+  color: #0b94a1;
 }
 .App-link {
   color: #61dafb;
@@ -73,11 +74,20 @@ nav >a:hover {
   background-color: rgb(112, 128, 143);
   color: rgb(255, 253, 253);
   box-shadow: rgba(43, 43, 43, 0.579) 5px 5px 5px 5px;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .projectPic {
   width: 19em;
   height: 16em;
+}
+
+.project-description {
+  width: 19em;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-weight: bolder;
 }
 
 .aboutMeContainer {
@@ -160,7 +170,8 @@ nav >a:hover {
 @media only screen and (max-width: 768px) {
   body {
     flex-direction: column;
-    font-family: Chalkduster, fantasy
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
   }
   .projectsContainer {
     max-width: 100%;
