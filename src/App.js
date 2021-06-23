@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+// import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Contact from './component/Contact'
 import About from './component/About'
@@ -13,22 +13,29 @@ import austinPic from './austinPic.jpg'
 
 const App = () => {
   return (
-    <Router>
+    // <Router>
+    <>
       <Header />
       <main className="App">
-        <Route exact path="/" render={() =>
-          <About
-            austinPic={austinPic}
-          />} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/projects" render={() =>
+        {/* <Route exact path="/" render={() => */}
+        <About
+        title="about"
+          austinPic={austinPic}
+          />
+        {/* <Route path="/contact" component={Contact} />*/}
+        <Contact
+        title="contact"
+        />
+        {/* <Route path="/projects" render={() => */}
           <Projects
+          title="projects"
             dogspot={dogspot}
             pokemon_catch={pokemon_catch}
-          />} />
+          />
       </main>
       <Footer />
-    </Router>
+     {/* </Router> */}
+    </>
   );
 }
 
